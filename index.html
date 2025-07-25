@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Arcanum - Protótipo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="ui-container">
+            <div id="health-bar-container">
+                <div id="health-bar"></div>
+                <span id="health-text"></span>
+            </div>
+            <div id="xp-bar-container">
+                <div id="xp-bar"></div>
+                <span id="xp-text">Nível: 1</span>
+            </div>
+            <!-- Containers separados para ícones de armas e passivos -->
+            <div id="icons-wrapper">
+                <div id="weapon-icons" class="icon-row"></div>
+                <div id="passive-icons" class="icon-row"></div>
+            </div>
+            <div id="global-tooltip" style="display: none;"></div>
+            <div id="timer">Sobrevivendo por: 0s</div>
+        </div>
+        <div id="start-screen" class="screen">
+            <h1>NEON ARCANUM</h1>
+            <p>A megalópole de Nova Anima aguarda.</p>
+            <p>Você é Ayla Vox, uma Codificada. Sobreviva às hordas.</p>
+            <p><b>Controles:</b> W, A, S, D ou Setas para mover.</p>
+            <button id="start-button">Iniciar Run</button>
+        </div>
+        <div id="weapon-select-screen" class="screen" style="display: none;">
+            <h2>Escolha sua Arma Inicial</h2>
+            <p>Seu equipamento definirá sua estratégia inicial contra as hordas.</p>
+            <div id="weapon-options"></div>
+        </div>
+        <div id="level-up-screen" class="screen" style="display: none;">
+            <h2>VÓRTICE ESTABILIZADO</h2>
+            <p>Escolha uma melhoria para canalizar a energia.</p>
+            <div id="upgrade-options"></div>
+        </div>
+        <div id="game-over-screen" class="screen" style="display: none;">
+            <h2>CONEXÃO PERDIDA</h2>
+            <p>Você sobreviveu por <span id="final-time"></span> segundos.</p>
+            <p>A cidade caiu, mas a sua lenda ecoará nos circuitos.</p>
+            <button id="restart-button">Tentar Novamente</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
